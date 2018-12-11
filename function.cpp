@@ -79,10 +79,6 @@ int main1() {
         cout << endl;
       }
 
-      // string  str = to_string(a[0]) + to_string(a[1]) + to_string(a[2]);
-      // putText(temp, str, mousepoint, FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0,
-      // 0, 255));
-
       Mat mask;
       inRange(hsv, Scalar(low[0], low[1], low[2]),
               Scalar(high[0], high[1], high[2]), mask);
@@ -118,13 +114,6 @@ int main1() {
 
       cv::findContours(gray_all, contours_all, hierarchy_all, CV_RETR_TREE,
                        cv::CHAIN_APPROX_NONE, cv::Point(0, 0));
-
-      // Mat temp = Mat::zeros(gray_all.size(), CV_8UC3);
-      // drawContours(temp, contours_all, -1, CV_RGB(255, 0, 0), 1);
-      // //rng.uniform(0,255)  ��CV_FILLED
-
-      // namedWindow("������", 4);
-      // imshow("������", temp);
 
       //������������
       int maxindex = 0;
